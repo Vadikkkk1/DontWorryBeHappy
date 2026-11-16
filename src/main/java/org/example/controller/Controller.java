@@ -15,7 +15,7 @@ public class Controller {
     private final Model model;
     private final MyFrame frame;
     private final MyPanel panel;
-    private final AppAction action;
+    private AppAction action;
 
     private Controller() {
         model = new Model();
@@ -46,5 +46,8 @@ public class Controller {
 
     public void draw(Graphics2D g2) {
         model.draw(g2);
+    }
+    public void switchActionDraw(){
+        action = new ActionDraw(model);
     }
 }
